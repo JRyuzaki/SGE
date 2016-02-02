@@ -7,8 +7,8 @@
 #include <Math/Vector2.hpp>
 #include <Math/Vector3.hpp>
 
-#include <Component/Component.hpp>
-#include <Component/Transform.hpp>
+#include <Components/Component.hpp>
+#include <Components/Transform.hpp>
 
 class GameObject{
 	protected:

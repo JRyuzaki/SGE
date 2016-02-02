@@ -1,7 +1,7 @@
 #ifndef __TRANSFORM__
 #define __TRANSFORM__
 
-#include <Component/Component.hpp>
+#include <Components/Component.hpp>
 #include <Math/Vector3.hpp>
 #include <Math/Vector2.hpp>
 
