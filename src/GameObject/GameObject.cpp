@@ -47,7 +47,7 @@ const Vector2 GameObject::getScale() const{
 	return this->transform.getScale();
 }
 
-std::string GameObject::getName() const{
+const std::string GameObject::getName() const{
 	return this->name;
 }
 
