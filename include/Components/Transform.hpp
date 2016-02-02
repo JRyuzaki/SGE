@@ -5,6 +5,8 @@
 #include <Math/Vector3.hpp>
 #include <Math/Vector2.hpp>
 
+class GameObject;
+
 class Transform : public Component{
 	protected:
 		Vector3 position{0, 0, 0};
