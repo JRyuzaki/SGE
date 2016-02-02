@@ -35,7 +35,7 @@ void GameObject::setScale(const Vector2 scale){
 	this->transform.setScale(scale);
 }
 
-void GameObject::setName(std::string name){
+void GameObject::setName(const std::string name){
 	this->name = name;
 }
 
