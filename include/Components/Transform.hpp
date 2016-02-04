@@ -26,7 +26,9 @@ class Transform : public Component{
 		void setRotation(const double rotation);
 		const double getRotation() const;
 
-		void updateComponent(GameObject& g_object){};	///< Update Function for every GameObject that is executed, needs to be overriden if used
+		void updateComponent(){
+
+		};	///< Update Function for every GameObject that is executed, needs to be overriden if used
 };
 
 #endif
