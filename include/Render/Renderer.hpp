@@ -6,7 +6,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include <Render/Renderable.hpp>
+#include <Components/Renderable.hpp>
 
 const bool zBufferCompare(Renderable* one, Renderable* other);
 
