@@ -8,19 +8,21 @@
 
 #include <Components/Renderable.hpp>
 
-const bool zBufferCompare(Renderable* one, Renderable* other);
+namespace sge{
 
-class Renderer{
-	private:
-		std::vector<Renderable*> renderList;
-		sf::RenderWindow* render_window;
+	const bool zBufferCompare(Renderable* one, Renderable* other);
 
-	public:
-		Renderer(sf::RenderWindow* render_window);
+	class Renderer{
+		private:
+			std::vector<Renderable*> renderList;
+			sf::RenderWindow* render_window;
 
-		void addToRenderer(Renderable* obj);
-		void render();
-};
+		public:
+			Renderer(sf::RenderWindow* render_window);
 
+			void addToRenderer(Renderable* obj);
+			void render();
+	};
 
+}
 #endif

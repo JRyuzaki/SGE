@@ -3,7 +3,9 @@
 
 #include <Components/Component.hpp>
 
-class Collider : public Component{
+namespace sge{
+  class Collider : public Component{
 
-};
+  };
+}
 #endif

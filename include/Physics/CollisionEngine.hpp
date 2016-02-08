@@ -8,17 +8,19 @@
 #include <Physics/Rigidbody.hpp>
 #include <Math/Vector2.hpp>
 
-class CollisionEngine{
-	protected:
-		std::vector<RectCollider*> colliders;	///TODO: Abstract Collider
+namespace sge{
+	class CollisionEngine{
+		protected:
+			std::vector<RectCollider*> colliders;	///TODO: Abstract Collider
 
-	public:
-		CollisionEngine() = default;
+		public:
+			CollisionEngine() = default;
 
-		void updateCollisions();
+			void updateCollisions();
 
-		void addCollider(RectCollider* collider);
+			void addCollider(RectCollider* collider);
 
-		static const bool boundingBoxCollision(RectCollider* r1, RectCollider* r2);
-};
+			static const bool boundingBoxCollision(RectCollider* r1, RectCollider* r2);
+	};
+}
 #endif

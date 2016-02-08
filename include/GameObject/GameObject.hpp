@@ -10,46 +10,48 @@
 #include <Components/Component.hpp>
 #include <Components/Transform.hpp>
 
-class GameObject{
-	protected:
-		std::string name{"gameobject"};		///<Name of the GameObject, does not need to be unique
-		std::vector<Component*> components;
+namespace sge{
+	class GameObject{
+		protected:
+			std::string name{"gameobject"};		///<Name of the GameObject, does not need to be unique
+			std::vector<Component*> components;
 
-		Transform transform{Vector3(0, 0, 0), Vector2(1, 1)};
+			Transform transform{Vector3(0, 0, 0), Vector2(1, 1)};
 
-		static int gameobject_counter;
+			static int gameobject_counter;
 
-	public:
-		GameObject();
-		GameObject(const float spawn_x, const float spawn_y, const float spawn_z);
-		GameObject(const Vector3 position, const Vector2 scale);
-		~GameObject();
+		public:
+			GameObject();
+			GameObject(const float spawn_x, const float spawn_y, const float spawn_z);
+			GameObject(const Vector3 position, const Vector2 scale);
+			~GameObject();
 
-		static const int getGameObjectCounter();
+			static const int getGameObjectCounter();
 
-		void setPosition(const Vector3 position);
-		void setScale(const Vector2 scale);
-		void setName(const std::string name);
+			void setPosition(const Vector3 position);
+			void setScale(const Vector2 scale);
+			void setName(const std::string name);
 
-		const Vector3 getPosition() const;
-		const Vector2 getScale() const;
-		const std::string getName() const;
+			const Vector3 getPosition() const;
+			const Vector2 getScale() const;
+			const std::string getName() const;
 
-		void addComponent(Component* component);
-		std::vector<Component*>* getComponents();
+			void addComponent(Component* component);
+			std::vector<Component*>* getComponents();
 
-		virtual void updateGameObject(){};	///<This method is the interface for users to implement their own update routines for the GameObject
+			virtual void updateGameObject(){};	///<This method is the interface for users to implement their own update routines for the GameObject
 
-		template<typename ComponentClass>ComponentClass* getComponent(){
-			for(Component* component : *getComponents()){
-				if(ComponentClass* g_component = dynamic_cast<ComponentClass*>(component)){
-					return g_component;
+			template<typename ComponentClass>ComponentClass* getComponent(){
+				for(Component* component : *getComponents()){
+					if(ComponentClass* g_component = dynamic_cast<ComponentClass*>(component)){
+						return g_component;
+					}
 				}
+				return NULL;
 			}
-			return NULL;
-		}
 
-	protected:
-		void initializeName();	///<This function is used in all constructors to give the GameObject a standardized name
-};
+		protected:
+			void initializeName();	///<This function is used in all constructors to give the GameObject a standardized name
+	};
+}
 #endif

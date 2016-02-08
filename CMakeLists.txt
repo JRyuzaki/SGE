@@ -6,7 +6,7 @@ project(SGE)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 #Add Headers
-include_directories(include)
+include_directories(GLOB INCLUDE_FILES include)
 
 #Collect all Source Files Recursive
 file(GLOB_RECURSE SRC_FILES src/*.cpp)

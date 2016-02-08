@@ -6,32 +6,34 @@
 #include <GameObject/GameObject.hpp>
 #include <Math/Vector2.hpp>
 
-class RectCollider : public Component{
-	protected:
-		Vector2 left_top_corner{0, 0};
-		int width{0};
-		int height{0};
-	public:
-		RectCollider() = default;
+namespace sge{
+	class RectCollider : public Component{
+		protected:
+			Vector2 left_top_corner{0, 0};
+			int width{0};
+			int height{0};
+		public:
+			RectCollider() = default;
 
-		RectCollider(Vector2 left_top_corner, int width, int height) : left_top_corner(left_top_corner), width(width), height(height){
+			RectCollider(Vector2 left_top_corner, int width, int height) : left_top_corner(left_top_corner), width(width), height(height){
 
-		}
+			}
 
-		const Vector2 getLeftTopCorner() const{
-			return this->left_top_corner;
-		}
+			const Vector2 getLeftTopCorner() const{
+				return this->left_top_corner;
+			}
 
-		const int getRectWidth() const{
-			return this->width;
-		}
+			const int getRectWidth() const{
+				return this->width;
+			}
 
-		const int getRectHeight() const{
-			return this->height;
-		}
+			const int getRectHeight() const{
+				return this->height;
+			}
 
-		void updateComponent(GameObject &game_object){
-			this->left_top_corner = Vector2(game_object.getPosition().x, game_object.getPosition().y);
-		}
-};
+			void updateComponent(GameObject &game_object){
+				this->left_top_corner = Vector2(game_object.getPosition().x, game_object.getPosition().y);
+			}
+	};
+}
 #endif

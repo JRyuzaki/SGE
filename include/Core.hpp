@@ -14,8 +14,8 @@
 #include <Physics/PhysicsEngine.hpp>
 
 #include <Physics/Rigidbody.hpp>
-#include <Collider/Collider.hpp>
-#include <Collider/RectCollider.hpp>
+#include <Physics/Collider/Collider.hpp>
+#include <Physics/Collider/RectCollider.hpp>
 
 #include <Render/Renderer.hpp>
 #include <Render/AnimatedSprite.hpp>
