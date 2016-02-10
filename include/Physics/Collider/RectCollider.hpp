@@ -31,8 +31,8 @@ namespace sge{
 				return this->height;
 			}
 
-			void updateComponent(GameObject &game_object){
-				this->left_top_corner = Vector2(game_object.getPosition().x, game_object.getPosition().y);
+			void updateComponent(){
+				this->left_top_corner = Vector2(this->game_object->getPosition().x, this->game_object->getPosition().y);
 			}
 	};
 }
