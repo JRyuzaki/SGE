@@ -40,7 +40,7 @@ namespace sge{
 			void setVelocity(const Vector2 velocity);
 			Vector2 getVelocity() const;
 
-			void updateComponent(GameObject& g_object);
+			void updateComponent();
 	};
 }
 #endif
