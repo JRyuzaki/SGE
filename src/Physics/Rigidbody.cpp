@@ -41,7 +41,7 @@ namespace sge{
 		return this->velocity;
 	}
 
-	void Rigidbody::updateComponent(GameObject& g_object){
-		g_object.setPosition(this->position);
+	void Rigidbody::updateComponent(){
+		this->game_object->setPosition(this->position);
 	}
 }
