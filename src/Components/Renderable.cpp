@@ -94,8 +94,8 @@ namespace sge{
 		this->sprite.setOrigin(this->origin_offset.x, this->origin_offset.y);
 	}
 
-	void Renderable::updateComponent(GameObject& g_object){
-		positionSprite(g_object.getPosition());
+	void Renderable::updateComponent(){
+		positionSprite(this->game_object->getPosition());
 	}
 
 	void Renderable::changeTexture(const sf::Texture& texture){
