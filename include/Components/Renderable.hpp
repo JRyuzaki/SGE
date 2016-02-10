@@ -33,7 +33,8 @@ namespace sge{
 
 			sf::Sprite& getSprite();
 
-			void updateComponent(GameObject& g_object);
+			void updateComponent();
+			
 			void positionSprite(const Vector3 position);
 			void setSprite(const sf::Texture &texture);
 			const Vector2 getSpriteScale() const;
