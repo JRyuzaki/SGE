@@ -6,9 +6,9 @@
 
 #include <Components/Component.hpp>
 #include <Components/Renderable.hpp>
-#include <Components/Transform.hpp>
 
 #include <GameObject/GameObject.hpp>
+#include <GameObject/Transform.hpp>
 
 #include <Physics/CollisionEngine.hpp>
 #include <Physics/PhysicsEngine.hpp>
@@ -19,5 +19,7 @@
 
 #include <Render/Renderer.hpp>
 #include <Render/AnimatedSprite.hpp>
+
+#include <Scene/SceneManager.hpp>
 
 #endif
