@@ -23,7 +23,8 @@ namespace sge{
 		int i = 0;
 
 		for(Renderable* renderObject : this->renderList){
-			this->render_window->draw(renderObject->getSprite());
+			if(renderObject->getGameObject()->isActive())
+				this->render_window->draw(renderObject->getSprite());
 		}
 		this->render_window->display();
 	}
