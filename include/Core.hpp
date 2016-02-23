@@ -5,7 +5,7 @@
 #include <Math/Vector3.hpp>
 
 #include <Components/Component.hpp>
-#include <Components/Renderable.hpp>
+#include <Components/SpriteRenderer.hpp>
 
 #include <GameObject/GameObject.hpp>
 #include <GameObject/Transform.hpp>
