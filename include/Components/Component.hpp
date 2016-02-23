@@ -2,11 +2,11 @@
 #define __COMPONENT__
 
 namespace sge{
-	class GameObject;
+	class GameObject;		//Foreward-Declaration needed here to resolve circular dependency
 	
 	class Component{
 		protected:
-			GameObject* game_object;
+			GameObject* game_object;		//Reference to the GameObject that uses the component
 		public:
 			/**
 			 * This virtual function is used as an interface for the user to make his own custom Components
