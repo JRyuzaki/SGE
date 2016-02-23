@@ -6,7 +6,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include <Components/Renderable.hpp>
+#include <Components/SpriteRenderer.hpp>
 
 namespace sge{
 
